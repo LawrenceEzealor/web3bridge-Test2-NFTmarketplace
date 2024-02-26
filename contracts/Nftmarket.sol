@@ -60,7 +60,7 @@ contract NFTMarketplace is ERC721 {
 
     function transferOwnership(address _newOwner) public {
         isOwner();
-        require(_newOwner != address(0), "Invalid new owner address");
+        require(_newOwner != address(0), "zero address detected");
         owner = _newOwner;
     }
 
